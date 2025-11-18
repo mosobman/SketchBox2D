@@ -34,7 +34,7 @@ void stop() {
 void setup() {
   frameRate(60);
   textFont(createFont("Arial", FONTSIZE, true));
-  camera = new Camera();
+  camera = new Camera2D();
   tone.startAudioThread();
   try {
     // Locate private field in PApplet
