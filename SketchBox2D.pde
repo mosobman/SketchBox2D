@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 
 
 
-boolean FULLSCREEN = false;
+boolean FULLSCREEN = true;
 String MODE = P3D;
 int FONTSIZE = 20;
 Camera2D camera;
@@ -76,6 +76,14 @@ void draw() {
   camera.applyMatrix();
   camera.drawGrid();
   //.draw();
+  fill(255,100); stroke(0); strokeWeight(5.0);
+  
+  for (float i = 1; i <= 4; i++) {
+    rotate(frameCount/(60.0/i));
+    circle(0,0, 2.0*250.0/i);
+    line(0,0,0,250.0/i);
+    translate(0,250.0/i);
+  }
   popMatrix(); popStyle();
   
   translate(0,0,1);

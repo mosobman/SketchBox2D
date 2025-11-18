@@ -44,6 +44,6 @@ class Camera2D {
   public float zoom() { return exp(zoomLog); }
   
   public String toString() {
-    return String.format("Camera(pan=%s, zoomLog=%.3f, zoom=%.3f)", pan.toString(), zoomLog, zoom());
+    return String.format("Camera(pan={x:%d, y:%d}, zoomLog=%.1f, zoom=%.3f)", (int) -pan.x, (int) -pan.y, zoomLog, zoom());
   }
 }
